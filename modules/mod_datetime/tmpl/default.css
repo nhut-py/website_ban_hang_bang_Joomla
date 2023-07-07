@@ -1,0 +1,19 @@
+/* ======================================================
+ # Display Date and Time for Joomla! - v2.3.7 (free version)
+ # -------------------------------------------------------
+ # For Joomla! CMS (v3.x)
+ # Author: Web357 (Yiannis Christodoulou)
+ # Copyright (©) 2014-2022 Web357. All rights reserved.
+ # License: GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html
+ # Website: https:/www.web357.com
+ # Demo: https://demo.web357.com/joomla/date-time
+ # Support: support@web357.com
+ # Last modified: Thursday 17 February 2022, 03:25:10 AM
+ ========================================================= */
+ 
+.mod_datetime { 
+    padding: 0;
+    margin: 0;
+}
+.mod_datetime_date {}
+.mod_datetime_time {}

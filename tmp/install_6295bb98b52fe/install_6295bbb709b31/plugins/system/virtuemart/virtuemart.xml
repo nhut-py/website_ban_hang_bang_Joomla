@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" client="site" group="system" version="3.4" method="upgrade">
+    <name>plg_system_virtuemart</name>
+    <description>PLG_SYSTEM_VIRTUEMART_DESC</description>
+    <copyright>(C) 2009 - 2019 Unstoppable Limited</copyright>
+    <license>GNU/GPLv2 http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <author>junstoppable.com / junstoppable.de</author>
+    <authorEmail>info@junstoppable.de</authorEmail>
+    <authorUrl>https://www.junstoppable.de</authorUrl>
+    <creationDate>March 2018</creationDate>
+    <version>1.0.0</version>
+    <files>
+        <filename plugin="virtuemart">virtuemart.php</filename>
+        <folder>language</folder>
+        <filename>index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+            </fieldset>
+        </fields>
+    </config>
+</extension>

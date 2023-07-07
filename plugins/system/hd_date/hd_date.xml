@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<extension version="4" type="plugin" group="system" method="upgrade">
+	<name>System - HD-Date</name>
+	<author>Hyde-Design</author>
+	<creationDate>December 2021</creationDate>
+	<copyright>2021 Hyde-Design</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>sales@hyde-design.co.uk</authorEmail>
+	<authorUrl>www.hyde-design.co.uk</authorUrl>
+	<version>4.01</version>
+	<description>HD-Date replaces any instance of {date} with the current date, {day} with the current day, {month} with the current month or {year} with the current year.</description>
+	 <updateservers>
+    <server type="extension" priority="1" name="HD-Date">https://www.hyde-design.co.uk/feeds/hd-date.xml</server>
+ </updateservers>
+	<files>
+		<filename plugin="hd_date">hd_date.php</filename>
+	</files>
+
+<config>
+	<fields name="params">
+	<fieldset name="basic">
+	   <field name="date_side" type="list" default="server_side" label="Render date from..." description="Choose whether to generate the date using Javascript or PHP. ">
+          <option value="client_side">Client Side (Javascript)</option>
+          <option value="server_side">Server Side (PHP)</option>
+        </field>
+        </fieldset>
+    </fields>
+</config>
+</extension>

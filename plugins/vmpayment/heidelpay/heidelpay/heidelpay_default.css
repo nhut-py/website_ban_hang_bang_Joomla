@@ -1,0 +1,118 @@
+html, body {
+    background-color: #ffffff;
+    color: #333;
+	font-size: 14px!important;
+}
+
+tr#notMandatoryRow, tr#addressBlock, tr#userInfoBlock, tr#contactBlock, tr#spacer1, tr#spacer2, tr#spacer3, tr#spacer4 {
+    display: none;
+}
+.frm_box {
+    border-style: solid;
+    border-color: #FFF;
+    border-width: 1px;
+    background-color: #FFF;
+	font-size: 14px!important;
+}
+
+input, select {
+    color: #333;
+    background-color: #ffffff;
+	font-size: 14px!important;
+}
+
+a:link {
+    color: #DC821C;
+	font-size: 14px!important;
+}
+
+a:visited {
+    color: #DC821C;
+}
+
+a:hover {
+    color: #DC821C;
+	text-decoration: underline;
+}
+
+a:active {
+    color: #DC821C;
+	text-decoration: underline;
+}
+
+a:focus {
+    color: #DC821C;
+	text-decoration: underline;
+}
+
+.bar {
+    display: none;
+}
+
+select#paymentMethod {
+    display: none;
+	font-size: 14px!important;
+}
+
+#paymentSelection {
+    display: none;
+	font-size: 14px!important;
+}
+
+td.buttonRight {
+    width: 100%;
+}
+
+input#send, input#continue {
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    color: #777;
+}
+
+input#send, input#continue {
+border: 1px solid transparent;
+border-radius: 0px;
+cursor: pointer;
+font-size: 14px!important;
+font-weight: 400;
+line-height: 1.42857;
+margin-bottom: 0;
+padding: 4px 12px;
+text-align: center;
+vertical-align: middle;
+white-space: nowrap;
+background: #988676;
+color: #fff !important;
+}
+
+input#send:hover, input#continue:hover {
+background: #b49277 none repeat scroll 0 0 !important;
+border: 1px solid #b49277;
+color: #fff !important;
+}
+
+input#cancel, input.btn {
+ border: 1px solid transparent;
+border-radius: 0px;
+cursor: pointer;
+font-size: 14px!important;
+font-weight: 400;
+line-height: 1.42857;
+margin-bottom: 0;
+padding: 4px 12px;
+text-align: center;
+vertical-align: middle;
+white-space: nowrap;
+background: #988676;
+color: #fff !important;
+}
+
+input#cancel:hover, input.btn:hover {
+   background: #b49277 none repeat scroll 0 0 !important;
+border: 1px solid #b49277;
+color: #fff !important;
+}
+
+

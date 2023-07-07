@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metafile version="3.2" client="site">
+	<tag>vi-VN</tag>
+	<name>Vietnamese (vi-VN)</name>
+	<version>3.2.1.2</version>
+	<creationDate>December 2013</creationDate>
+	<author>Vietnamese Translation Team</author>
+	<authorEmail>info@joomlaviet.info</authorEmail>
+	<authorUrl>http://joomlaviet.info</authorUrl>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+
+	<metadata>
+		<name>Vietnamese (vi-VN)</name>
+		<tag>vi-VN</tag>
+		<rtl>0</rtl>
+		<locale>vi_VN.utf8, vi_VN, vietnamese</locale>
+		<firstDay>1</firstDay>
+		<weekEnd>0,6</weekEnd>
+	</metadata>
+	<params />
+</metafile>

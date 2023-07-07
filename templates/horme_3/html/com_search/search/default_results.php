@@ -1,0 +1,49 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  com_search
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('_JEXEC') or die;
+?>
+
+<dl class="search-results <?php echo $this->pageclass_sfx; ?>">
+<?php foreach ($this->results as $result) : ?>
+	<dt class="result-title">
+		<?php echo $this->pagination->limitstart + $result->count . '. ';?>
+		<?php if ($result->href) :?>
+			<a href="<?php echo JRoute::_($result->href); ?>"<?php if ($result->browsernav == 1) :?> target="_blank"<?php endif;?>>
+				<?php echo $this->escape($result->title);?>
+			</a>
+		<?php else:?>
+			<?php echo $this->escape($result->title);?>
+		<?php endif; ?>
+	</dt>
+	<dd class="result-text">
+  	<?php if ($result->section) : ?>
+			<span class="small result-category text-muted">
+				<?php echo $this->escape($result->section); ?>
+			</span>
+      &nbsp;
+  	<?php endif; ?>
+    <?php if ($this->params->get('show_date')) : ?>
+			<span class="small result-created text-muted">
+        <?php echo JText::sprintf('JGLOBAL_CREATED_DATE_ON', $result->created); ?>
+      </span>
+	  <?php endif; ?>
+    <p>
+  		<?php echo $result->text; ?>
+    </p>
+	</dd>
+<?php endforeach; ?>
+</dl>
+<hr>
+<div class="margin-top text-center">
+  <div class="counter">
+		<?php echo $this->pagination->getPagesCounter(); ?>
+	</div>
+	<?php echo $this->pagination->getPagesLinks(); ?>
+</div>

@@ -1,0 +1,226 @@
+#fds-toolbar, .navbar-default, footer{
+  border: none;
+}
+
+.toolbar-r{
+  text-align: right;
+}
+
+footer{
+  background-color: #333;
+  color: #fafafa;
+  margin-top: 0;
+  border: none;
+}
+
+small, .small {
+  font-size: 85%;
+}
+
+#totop-scroller {
+  right: 0;
+}
+
+.pager{
+  font-size: 100%;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+/* Reviews */
+
+.normal blockquote{
+  background-color: #f5f5f5;
+}
+
+.well blockquote{
+  background-color: #fff;
+}
+/* Category view */
+
+.category-view > h1{
+  margin-top: 0;
+}
+
+#sorting{
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.display-number .input-sm{
+  height: 28px;
+  line-height: 28px;
+  padding: 4px;
+  vertical-align: baseline;
+}
+
+.orderby-displaynumber .well{
+  min-height: 50px;
+}
+/* Menu */
+
+.navbar-default{
+  background-color: #333;
+  border-top: none;
+  border-bottom: none;
+}
+
+.navbar .nav > li.active > a, .navbar .nav > li.active > span {
+  background-color: #272727;
+  font-weight: bold;
+}
+
+.navbar .nav a,
+.navbar .nav span,
+.navbar-default .navbar-toggle,
+nav .dropdown-menu > li.parent::after, .flyout-menu > li.parent::after{
+  color: #fff;
+}
+
+.navbar .nav > li:hover,
+.navbar-default .dropdown-menu > li > span:hover,
+.navbar-default .dropdown-menu > .active > span,
+.navbar-default .dropdown-menu > .active > span:hover,
+.flyout-menu > li > span:hover,
+.flyout-menu > .active > span,
+.flyout-menu > .active > span:hover,
+.flyout-menu > li > a:hover, .flyout-menu > li > a:focus, .flyout-menu > li > span:hover, .flyout-menu > li > span:focus{
+	background-color: #272727;
+}
+
+.flyout-menu{
+	padding: 0;
+	background-color: #333;
+	box-shadow: none;
+	border: none;
+  font-size: 13px;
+}
+
+#offcanvas .flyout-menu{
+	background-color: #008cba;
+}
+
+#offcanvas li {
+  border-bottom: none;
+}
+
+#offcanvas .navbar-nav span, #offcanvas .flyout-menu > li > a {
+	color: #fff;
+}
+
+#offcanvas .navbar-nav > li > span {
+	padding: 10px 15px;
+	line-height: 21px;
+	display: block;
+}
+
+#offcanvas .navbar-nav > li > span:hover,
+#offcanvas .dropdown-menu span:hover {
+	background-color: #006687;
+}
+
+/* Cart module */
+
+.vmCartModule{
+  padding: 8px 0;
+}
+
+.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu{
+  background-color: #f5f5f5;
+}
+/* Currency Module */
+
+.toolbar #virtuemart_currency_id {
+  line-height: 28px;
+  height: 28px;
+  padding: 4px;
+}
+/* Category Module */
+
+.vm-plus:hover span{
+  color: #333;
+}
+/* Modules */
+
+.border{
+  padding: 20px 0;
+}
+
+.box .border {
+  border: 1px solid #DDD;
+  padding: 20px;
+}
+
+#fds-bottom-c{
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+#fds-bottom-c h3{
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.breadcrumb{
+  padding: 10px 0 0;
+}
+/* Buttons */
+
+.btn-primary{
+  background-color: #333;
+  border-color: #212121;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary.focus:active, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus{
+  background-color: #222;
+  border-color: #000;
+}
+/* System messages */
+
+#system-message p {
+  font-size: 100%;
+}
+/* Slider */
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+  background-color: #eee;
+  margin-top: -25px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+}
+
+.carousel-control.right{
+  right: 0;
+}
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+  right: 0;
+  margin-right: 0;
+}
+
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+  left: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 992px) {
+  body{
+    padding-top: 50px;
+  }
+
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 640px) {
+  .toolbar-l, .toolbar-r {
+    text-align: center !important;
+    padding: 5px;
+  }
+}

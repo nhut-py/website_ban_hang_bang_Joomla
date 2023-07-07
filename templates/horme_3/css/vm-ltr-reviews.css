@@ -1,0 +1,23 @@
+.ratingbox{
+  white-space: nowrap;
+  position: relative;
+}
+
+.ratingbox span{
+  font-size: 14px;
+  color: #ccc;
+}
+
+.stars-orange{
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.stars-orange span, .list-reviews .vote{
+  color: #F0AD4E;
+}
+
+.dummy > div{
+  width: 90px;
+}

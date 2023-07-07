@@ -1,0 +1,92 @@
+.margin-top{
+  margin-top: 30px;
+}
+
+.margin-top-15{
+  margin-top: 15px;
+}
+
+.vm-nodisplay {
+  display: none;
+}
+
+.notifyform, .vm-orders-list{
+	margin-bottom: 30px;
+}
+
+.vm-price-wrapper{
+	line-height: 18px;
+}
+
+.vm3pr-2.vm-price-wrapper{
+  min-height: 40px;
+}
+
+.vm3pr-3.vm-price-wrapper{
+  min-height: 60px;
+}
+
+.vm3pr-4.vm-price-wrapper{
+  min-height: 80px;
+}
+
+.vm3pr-5.vm-price-wrapper{
+  min-height: 100px;
+}
+
+.vm3pr-6.vm-price-wrapper{
+  min-height: 120px;
+}
+
+.vm3pr-7.vm-price-wrapper{
+  min-height: 140px;
+}
+
+.vm3pr-8.vm-price-wrapper{
+  min-height: 160px;
+}
+
+.vm3pr-9.vm-price-wrapper{
+  min-height: 180px;
+}
+
+/* Custom fields */
+.vm3pr-1 .product-fields-wrapper{
+  min-height: 56px;
+}
+
+.vm3pr-2 .product-fields-wrapper{
+  min-height: 112px;
+}
+
+.vm3pr-3 .product-fields-wrapper{
+  min-height: 160px;
+}
+
+.vm3pr-4 .product-fields-wrapper{
+  min-height: 208px;
+}
+
+.vm3pr-5 .product-fields-wrapper{
+  min-height: 256px;
+}
+
+/* Preloader */
+.vm-preloader {
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ddd;
+  z-index: 100;
+}
+
+.vm-preloader img{
+  position: relative;
+  top: 45%;
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>MOD_DATETIME</name>
+	<author>Web357 (Yiannis Christodoulou)</author>
+	<creationDate>06-Oct-2021</creationDate>
+	<copyright>Copyright (©) 2014-2022 Web357. All rights reserved.</copyright>
+	<license>GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@web357.com</authorEmail>
+	<authorUrl>https:/www.web357.com</authorUrl>
+	<version>2.3.7</version>
+	<variant>free</variant>
+	<description>A simple, easy and nice display of the current date and time using AJAX scripting. It includes various display formats to choose from based on your preference. It supports all countries date and time formats.</description>
+
+	<files>
+		<filename module="mod_datetime">mod_datetime.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>elements</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>script.install.helper.php</filename>
+	</files>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<config>
+
+		<fields name="params">		
+			
+			<fieldset name="basic">
+
+				<!-- BEGIN: Version Check -->
+				<field type="header" label="W357FRM_HEADER_VERSION_CHECK" />
+				<field name="info" id="info" type="info" extension_type="module" extension_name="mod_datetime" real_name="MOD_DATETIME" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Version Check -->
+
+				<!-- BEGIN: Check if Web357 Framework plugin exists -->
+				<field name="w357frmrk" id="w357frmrk" type="w357frmrk" addfieldpath="/modules/mod_datetime/elements" />
+				<!-- END: Check if Web357 Framework plugin exists -->
+				
+				<field type="header" label="W357FRM_HEADER_PARAMETERS" />
+
+				<!-- ADD SOME TEXT IN FRONT OR AT THE END OF DATETIME -->
+				<field type="header" class="w357_small_header" label="MOD_DATETIME_HEADER_FRONT_END_TEXT" />
+				<field name="front_text" type="textarea" default="" label="MOD_DATETIME_FRONTTEXT_LBL" description="MOD_DATETIME_FRONTTEXT_DESC" rows="3" cols="25" filter="raw" />
+				<field name="end_text" type="textarea" default="" label="MOD_DATETIME_ENDTEXT_LBL" description="MOD_DATETIME_ENDTEXT_DESC" rows="3" cols="25" filter="raw" />
+
+				<!-- Date and Time format -->
+				<field type="header" class="w357_small_header" label="MOD_DATETIME_HEADER_DATETIME_FORMAT" />
+				
+				<field name="offset" type="timezone" default="" label="MOD_DATETIME_TIMEZONE_LBL" description="MOD_DATETIME_TIMEZONE_DESC">
+					<option value="">Visitor's Timezone (Default)</option>
+					<option value="gconfig_timezone">Default Timezone from Global Configuration</option>
+					<option value="UTC">JLIB_FORM_VALUE_TIMEZONE_UTC</option>
+				</field>
+
+				<field name="dateformat" id="dateformat" type="dateformat" default="" label="MOD_DATETIME_DATEFORMAT_LBL" description="MOD_DATETIME_DATEFORMAT_DESC" addfieldpath="/modules/mod_datetime/elements" />
+				
+				<field name="custom_date_format" type="text" default="" label="MOD_DATEFORMAT_CUSTOM_DATE_FORMAT_LBL" description="MOD_DATEFORMAT_CUSTOM_DATE_FORMAT_DESC" />
+	
+				<field name="dateformat_separator" type="list" default="/" label="MOD_DATEFORMAT_SEPARATOR_LBL" description="MOD_DATEFORMAT_SEPARATOR_DESC">
+					<option value="/">Slash (/)</option>
+					<option value=".">Dots or full stops (.)</option>
+					<option value="-">Hyphens or dashes (-)</option>
+					<option value=" ">Spaces ( )</option>
+				</field>
+				
+				<field name="between_text" type="textarea" default="" label="MOD_DATETIME_BETWEEN_TEXT_LBL" description="MOD_DATETIME_BETWEEN_TEXT_DESC" rows="3" cols="25" filter="raw" showon="dateformat!:[AND]timeformat!:4" />
+				
+				<field name="timeformat" type="list" default="3" label="MOD_DATETIME_TIMEFORMAT_LBL" description="MOD_DATETIME_TIMEFORMAT_DESC">
+					<option value="1">19:32 (static)</option>
+					<option value="2">19:32 (ajax/flashing)</option>
+					<option value="3">19:32:22 (ajax/flashing)</option>
+					<option value="4">MOD_DATETIME_NONE</option>
+				</field>
+				<field name="hour_system" type="radio" class="btn-group btn-group-yesno" default="24" label="MOD_DATETIME_12OR24HOURSYSTEM_LBL" description="MOD_DATETIME_12OR24HOURSYSTEM_DESC" showon="timeformat!:4">
+					<option value="12">12</option>
+					<option value="24">24</option>
+				</field>
+				<field name="show_leading_zero_for_hours" type="radio" class="btn-group" default="1" label="MOD_DATETIME_SHOW_LEADING_ZERO_FOR_HOURS_LBL" description="MOD_DATETIME_SHOW_LEADING_ZERO_FOR_HOURS_DESC" showon="timeformat!:4">
+					<option value="1">Yes (e.g. 01:09:59)</option>
+					<option value="0">No (e.g. 1:09:59)</option>
+				</field>
+				<field name="show_leading_zeros_for_minutes" type="radio" class="btn-group" default="1" label="MOD_DATETIME_SHOW_LEADING_ZERO_FOR_MINUTES_LBL" description="MOD_DATETIME_SHOW_LEADING_ZERO_FOR_MINUTES_DESC" showon="timeformat!:4">
+					<option value="1">Yes (e.g. 01:09:59)</option>
+					<option value="0">No (e.g. 01:9:51)</option>
+				</field>
+				<field name="display_pm_am" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_DATETIME_DISPLAYPMAM_LBL" description="MOD_DATETIME_DISPLAYPMAM_DESC" showon="timeformat!:4">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="igbo_calendar" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_DATETIME_IGBO_CALENDAR_LBL" description="MOD_DATETIME_IGBO_CALENDAR_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<!-- Styling -->
+				<field type="header" class="w357_small_header" label="MOD_DATETIME_HEADER_STYLING" />
+
+				<field name="datetime_in_two_rows" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_DATETIME_DATETIME_IN_TWO_ROWS_LBL" description="MOD_DATETIME_DATETIME_IN_TWO_ROWS_DESC" showon="timeformat!:4">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="custom_css" type="textarea" default="" label="MOD_DATETIME_CUSTOM_CSS_LBL" description="MOD_DATETIME_CUSTOM_CSS_DESC" rows="6" cols="50" filter="raw" />
+
+				<!-- BEGIN: JED Review -->
+				<field name="jedreview" id="jedreview" type="jedreview" extension_type="component" extension_name="mod_datetime" real_name="MOD_DATETIME" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: JED Review -->
+				
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+
+			<fieldset name="description" label="W357FRM_HEADER_DESCRIPTION">
+
+				<!-- BEGIN: Description -->
+				<field type="header" label="W357FRM_HEADER_DESCRIPTION" />
+				<field name="description" id="description" type="description" extension_type="module" extension_name="mod_datetime" real_name="MOD_DATETIME" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Description -->
+
+				<!-- BEGIN: Version Check -->
+				<field type="header" label="W357FRM_HEADER_VERSION_CHECK" />
+				<field name="info" id="info" type="info" extension_type="module" extension_name="mod_datetime" real_name="MOD_DATETIME" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Version Check -->
+			
+			</fieldset>
+			
+			<fieldset name="about" label="W357FRM_HEADER_ABOUT_WEB357">
+				
+				<!-- BEGIN: About Web357 -->
+				<field type="header" label="W357FRM_HEADER_ABOUT_WEB357" />
+				<field name="about" id="about" type="about" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: About Web357 -->
+				
+			</fieldset>
+
+		</fields>	
+	</config>
+
+	<updateservers><server type="extension" priority="1" name="Display Date and Time (free version)"><![CDATA[https://updates.web357.com/datetime/datetime_free.xml]]></server></updateservers>
+	
+</extension>

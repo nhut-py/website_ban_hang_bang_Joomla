@@ -1,0 +1,57 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  com_config
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('_JEXEC') or die;
+
+// Load tooltips behavior
+JHtml::_('behavior.formvalidator');
+JHtml::_('bootstrap.tooltip');
+//JHtml::_('formbehavior.chosen', 'select');
+
+JFactory::getDocument()->addScriptDeclaration("
+	Joomla.submitbutton = function(task)
+	{
+		if (task == 'config.cancel' || document.formvalidator.isValid(document.getElementById('application-form'))) {
+			Joomla.submitform(task, document.getElementById('application-form'));
+		}
+	}
+");
+?>
+
+<form action="<?php echo JRoute::_('index.php?option=com_config');?>" id="application-form" method="post" name="adminForm" class="form-validate">
+
+	<div class="row config-manager">
+		<!-- Begin Content -->
+    <div class="col-md-12">
+  		<div id="page-site" class="tab-pane active">
+				<?php echo $this->loadTemplate('site'); ?>
+				<?php echo $this->loadTemplate('metadata'); ?>
+				<?php echo $this->loadTemplate('seo'); ?>
+  		</div>
+      <hr>
+  		<div class="text-center">
+				<button type="button" class="btn btn-primary" onclick="Joomla.submitbutton('config.save.config.apply')">
+					<span class="glyphicon glyphicon-ok"></span> <?php echo JText::_('JSAVE') ?>
+				</button>
+				<button type="button" class="btn" onclick="Joomla.submitbutton('config.cancel')">
+					<span class="glyphicon glyphicon-remove"></span> <?php echo JText::_('JCANCEL') ?>
+				</button>
+  		</div>
+
+  		<input type="hidden" name="task" value="" />
+  		<?php echo JHtml::_('form.token'); ?>
+    </div>
+		<!-- End Content -->
+	</div>
+
+</form>
+<script>
+jQuery('fieldset.btn-group').removeClass('btn-group');
+jQuery('fieldset fieldset').removeClass('radio').addClass('well');
+</script>

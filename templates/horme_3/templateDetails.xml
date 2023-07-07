@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="2.5" type="template" client="site" method="upgrade">
+	
+	<name>horme_3</name>
+	<creationDate>08/03/2021</creationDate>
+	<author>Spyros Petrakis</author>
+	<copyright>Copyright © 2015 - 2019 Spyros Petrakis</copyright>
+	<authorEmail>support@olympianthemes.com</authorEmail>
+	<authorUrl>https://www.olympianthemes.com</authorUrl>
+	<version>1.9.4</version>
+	<description>
+	<![CDATA[
+	<p>Horme 3 - A fully bootstraped Joomla! 3 and VirtueMart 3.</p>
+  <ul>
+	<li>Bootstrap 3.4.1</li>
+	<li>Mobile optimized</li>
+	<li>Fast loading</li>
+	</ul>
+	<hr>
+  <h3>Support</h3>
+  <ul>
+  <li><a href="https://www.olympianthemes.com/documentation/horme-3-free-documentation.html" target="_blank">Documentation</a></li>
+  <li><a href="mailto:support@olympianthemes.com">support@olympianthemes.com</a></li>
+  </ul>
+	]]>
+	</description>
+	
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>fds_slider.php</filename>
+		<filename>index.php</filename>
+		<filename>logic.php</filename>
+    <filename>Mobile_Detect.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_horme_3.ini</language>
+    <language tag="de-DE">de-DE/de-DE.tpl_horme_3.ini</language>
+	</languages>
+	
+	<positions>
+		<position>toolbar-l</position>
+		<position>toolbar-r</position>
+		<position>search</position>
+    <position>cart</position>
+    <position>menu</position>
+    <position>slider</position>
+		<position>breadcrumbs</position>
+		<position>top-a</position>
+		<position>top-b</position>
+    <position>top-c</position>
+		<position>sidebar-a</position>
+		<position>sidebar-b</position>
+		<position>innertop</position>
+		<position>innerbottom</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+    <position>bottom-c</position>
+		<position>footer</position>
+    <position>absolute</position>
+		<position>debug</position>
+		<position>cookie</position>
+	</positions>
+
+	<config>
+		<fields name="params">
+
+      <fieldset name="template">
+
+        <field name="container" type="list" default="container" label="TPL_VM_FIELD_WIDTH" description="TPL_VM_FIELD_WIDTH_DESC" filter="string">
+          <option value="container">Box</option>
+          <option value="container-fluid">Full Width</option>
+  	    </field>
+        <field name="style" type="list" default="1" label="TPL_VM_FIELD_STYLE_COLOR" description="TPL_VM_FIELD_STYLE_COLOR_DESC" filter="string">
+          <option value="0">None</option>
+					<option value="1">Style 1</option>
+  	    </field>
+        <field name="logoimage" label="Logo image" description="Select or upload a logo." type="media" directory="images" />
+        <field name="logotext"  type="text" default="" label="Logo text" description="Enter your logo text" filter="string" />
+        <field name="background" label="Background image" description="Select or upload a background image" type="media" directory="images" />
+        <field name="bgcolor"  type="text" default="" label="TPL_VM_FIELD_BACKGROUND_COLOR" description="TPL_VM_FIELD_BACKGROUND_COLOR_DESC" filter="string" />
+        <field name="boxcolor"  type="text" default="" label="TPL_VM_FIELD_BOX_COLOR" description="TPL_VM_FIELD_BOX_COLOR_DESC" filter="string" />
+        <field name="bfonts" type="list" default="default" label="TPL_VM_FIELD_BODY_FONT" description="TPL_VM_FIELD_BODY_FONT_DESC" filter="string">
+          <option value='default'>Default</option>
+					<option value='Georgia'>Georgia</option>
+					<option value='Times New Roman'>Times New Roman</option>
+					<option value='Tahoma'>Tahoma</option>
+					<option value='Verdana'>Verdana</option>
+					<option value='Trebuchet MS'>Trebuchet MS</option>
+	      </field>
+        <field name="hfonts" type="list" default="default" label="TPL_VM_FIELD_HEADER_FONT" description="TPL_VM_FIELD_HEADER_FONT_DESC" filter="string">
+          <option value='default'>Default</option>
+					<option value='Georgia'>Georgia</option>
+					<option value='Times New Roman'>Times New Roman</option>
+					<option value='Tahoma'>Tahoma</option>
+					<option value='Verdana'>Verdana</option>
+					<option value='Trebuchet MS'>Trebuchet MS</option>
+        </field>
+        <field name="customcss" type="checkbox" label="TPL_VM_FIELD_CUSTOM" description="TPL_VM_FIELD_CUSTOM_DESC" value="1" />
+        <field name="customjs" type="checkbox" label="TPL_VM_FIELD_CUSTOMJS" description="TPL_VM_FIELD_CUSTOMJS_DESC" value="1" />
+        <field name="cookie" type="checkbox" label="TPL_VM_FIELD_COOKIE" description="TPL_VM_FIELD_COOKIE_DESC" value="1" />
+
+      </fieldset>
+
+      <fieldset name="slider">
+
+        <field name="slideheight" default="400" type="text" label="TPL_VM_FIELD_SHEIGHT" description="TPL_VM_FIELD_SHEIGHT_DESC" filter="string" />
+        <field name="timer"  type="text" label="TPL_VM_FIELD_TIMER" description="TPL_VM_FIELD_TIMER_DESC" filter="string" />
+        <field name="slide1note" type="note" label="Slide 1" class="alert alert-info"/>
+        <field name="slide1" label="Slide image" description="Select or upload a slide image" type="media" directory="images" />
+        <field name="slide1link"  type="text" default="" label="TPL_HORME3_SLIDE_LINK" description="TPL_HORME3_SLIDE_DESC" filter="string" />
+        <field name="slide2note" type="note" label="Slide 2" class="alert alert-info"/>
+        <field name="slide2" label="Slide image" description="Select or upload a slide image" type="media" directory="images" />
+        <field name="slide2link"  type="text" default="" label="TPL_HORME3_SLIDE_LINK" description="TPL_HORME3_SLIDE_DESC" filter="string" />
+        <field name="slide3note" type="note" label="Slide 3" class="alert alert-info"/>
+        <field name="slide3" label="Slide image" description="Select or upload a slide image" type="media" directory="images" />
+        <field name="slide3link"  type="text" default="" label="TPL_HORME3_SLIDE_LINK" description="TPL_HORME3_SLIDE_DESC" filter="string" />
+        <field name="slide4note" type="note" label="Slide 4" class="alert alert-info"/>
+        <field name="slide4" label="Slide image" description="Select or upload a slide image" type="media" directory="images" />
+        <field name="slide4link"  type="text" default="" label="TPL_HORME3_SLIDE_LINK" description="TPL_HORME3_SLIDE_DESC" filter="string" />
+        <field name="slide5note" type="note" label="Slide 5" class="alert alert-info"/>
+        <field name="slide5" label="Slide image" description="Select or upload a slide image" type="media" directory="images" />
+        <field name="slide5link"  type="text" default="" label="TPL_HORME3_SLIDE_LINK" description="TPL_HORME3_SLIDE_DESC" filter="string" />
+
+      </fieldset>
+
+			<fieldset name="seo">
+
+        <field name="googlewebmaster"  type="text" default="" label="TPL_VM_FIELD_GOOGLEWMT" description="TPL_VM_FIELD_GOOGLEWMT_DESC" filter="string" />
+        <field name="bingwebmaster"  type="text" default="" label="TPL_VM_FIELD_BINGWMT" description="TPL_VM_FIELD_BINGWMT_DESC" filter="string" />
+        <field name="analytics" type="textarea" default="" label="TPL_VM_FIELD_ANALYTICS" description="TPL_VM_FIELD_ANALYTICS_DESC" rows="10" cols="50" filter="raw"/>
+
+			</fieldset>
+
+			<fieldset name="mobile">
+
+        <field name="mobile" type="list" default="smart" label="Select Mobile Devices" description="Select the mobile devices that the modules will not display for faster loading." filter="string">
+          <option value="smart">Smartphones</option>
+          <option value="tablet">Smartphones + Tablets</option>
+        </field>
+        <field name="@spacer" type="spacer" default="" label="" description="" />
+        <field name="toolbar" type="checkbox" label="TPL_VM_FIELD_TOOLBAR" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="breadcrumbs" type="checkbox" label="TPL_VM_FIELD_BREADCRUMBS" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="top-a" type="checkbox" label="TPL_VM_FIELD_TOPA" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="top-b" type="checkbox" label="TPL_VM_FIELD_TOPB" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="top-c" type="checkbox" label="Top-c position" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="fdsslider" type="checkbox" label="Fds-slider position" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="slider" type="checkbox" label="TPL_VM_FIELD_SLIDE" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="innertop" type="checkbox" label="TPL_VM_FIELD_INNERTOP" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="innerbottom" type="checkbox" label="TPL_VM_FIELD_INNERBOTTOM" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="sidebar-a" type="checkbox" label="Sidebar-a position" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="sidebar-b" type="checkbox" label="Sidebar-b position" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="bottom-a" type="checkbox" label="TPL_VM_FIELD_BOTTOMA" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="bottom-b" type="checkbox" label="TPL_VM_FIELD_BOTTOMB" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="bottom-c" type="checkbox" label="Bottom-c position" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+        <field name="footer" type="checkbox" label="TPL_VM_FIELD_FOOTER" description="TPL_VM_FIELD_MOBILE_DESC" value="1" />
+
+			</fieldset>
+
+		</fields>
+	</config>
+
+</extension>

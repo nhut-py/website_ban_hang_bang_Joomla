@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Vietnamese Language Pack</name>
+	<packagename>vi-VN</packagename> 
+	<version>3.2.1.2</version> 
+	<creationDate>December 2013</creationDate> 
+	<author>Vietnamese Translation Team</author> 
+	<authorEmail>info@joomlaviet.info</authorEmail> 
+	<authorUrl>http://joomlaviet.info</authorUrl>
+	<copyright>Copyright (C) 2013 joomlaviet.info and Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<url></url>
+	<packager>Joomla! Vietnamese</packager>
+	<packagerurl>www.joomlaviet.info</packagerurl>
+	<description>3.2.1.2 Joomla Vietnamese Language Package</description>
+	<files>
+		<file type="language" client="site" id="vi-VN">site_vi-VN.zip</file>
+		<file type="language" client="administrator" id="vi-VN">admin_vi-VN.zip</file>
+	</files>
+	<updateservers>
+	    <server type="collection" priority="1" name="Accredited Joomla! Translations">http://update.joomla.org/language/translationlist_3.xml</server>
+	</updateservers>
+</extension>

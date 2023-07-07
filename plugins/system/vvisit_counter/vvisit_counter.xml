@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>PLG_VVISIT_COUNTER</name>
+	<author>VINAORA</author>
+	<creationDate>Jun 2015</creationDate>
+	<copyright>Copyright (C) 2007-2015 VINAORA. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@vinaora.com</authorEmail>
+	<authorUrl>http://vinaora.com</authorUrl>
+	<version>3.4.0</version>
+	<description>PLG_VVISIT_COUNTER_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename plugin="vvisit_counter">vvisit_counter.php</filename>
+		<filename>index.html</filename>
+		<folder>helper</folder>
+		<folder>language</folder>
+		<folder>sql</folder>
+	</files>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/unistall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<updateservers>
+		<server type="extension" priority="1" name="Vinaora Update Server">http://update.vinaora.com/joomla/plg_vvisit_counter.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="onbackend" type="radio" default="0" class="btn-group btn-group-yesno" label="PLG_VVISIT_COUNTER_FIELD_ONBACKEND" description="PLG_VVISIT_COUNTER_FIELD_ONBACKEND_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

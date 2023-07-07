@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" client="site" type="language" method="upgrade">
+	<name>Vietnamese-VN</name>
+    <tag>vi-VN</tag>
+	<version>3.2.1.2</version>
+	<creationDate>December 2013</creationDate>
+	<author>Vietnamese Translation Team Translation Team</author>
+	<authorEmail>info@joomlaviet.info</authorEmail>
+	<authorUrl>http://joomlaviet.info</authorUrl>
+    <copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>Vietnamese language pack for Joomla! 3.2</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>vi-VN.com_ajax.ini</filename>
+		<filename>vi-VN.com_config.ini</filename>
+		<filename>vi-VN.com_contact.ini</filename>
+		<filename>vi-VN.com_content.ini</filename>
+		<filename>vi-VN.com_finder.ini</filename>
+		<filename>vi-VN.com_mailto.ini</filename>
+		<filename>vi-VN.com_media.ini</filename>
+		<filename>vi-VN.com_messages.ini</filename>
+		<filename>vi-VN.com_newsfeeds.ini</filename>
+		<filename>vi-VN.com_search.ini</filename>
+		<filename>vi-VN.com_tags.ini</filename>
+		<filename>vi-VN.com_users.ini</filename>
+		<filename>vi-VN.com_weblinks.ini</filename>
+		<filename>vi-VN.com_wrapper.ini</filename>
+		<filename>vi-VN.files_joomla.sys.ini</filename>
+		<filename>vi-VN.finder_cli.ini</filename>
+		<filename>vi-VN.ini</filename>
+		<filename>vi-VN.lib_fof.sys.ini</filename>
+		<filename>vi-VN.lib_idna_convert.sys.ini</filename>
+		<filename>vi-VN.lib_joomla.ini</filename>
+		<filename>vi-VN.lib_joomla.sys.ini</filename>
+		<filename>vi-VN.lib_phpmailer.sys.ini</filename>
+		<filename>vi-VN.lib_phputf8.sys.ini</filename>
+		<filename>vi-VN.lib_simplepie.sys.ini</filename>
+		<filename>vi-VN.localise.php</filename>
+		<filename>vi-VN.mod_articles_archive.ini</filename>
+		<filename>vi-VN.mod_articles_archive.sys.ini</filename>
+		<filename>vi-VN.mod_articles_categories.ini</filename>
+		<filename>vi-VN.mod_articles_categories.sys.ini</filename>
+		<filename>vi-VN.mod_articles_category.ini</filename>
+		<filename>vi-VN.mod_articles_category.sys.ini</filename>
+		<filename>vi-VN.mod_articles_latest.ini</filename>
+		<filename>vi-VN.mod_articles_latest.sys.ini</filename>
+		<filename>vi-VN.mod_articles_news.ini</filename>
+		<filename>vi-VN.mod_articles_news.sys.ini</filename>
+		<filename>vi-VN.mod_articles_popular.ini</filename>
+		<filename>vi-VN.mod_articles_popular.sys.ini</filename>
+		<filename>vi-VN.mod_banners.ini</filename>
+		<filename>vi-VN.mod_banners.sys.ini</filename>
+		<filename>vi-VN.mod_breadcrumbs.ini</filename>
+		<filename>vi-VN.mod_breadcrumbs.sys.ini</filename>
+		<filename>vi-VN.mod_custom.ini</filename>
+		<filename>vi-VN.mod_custom.sys.ini</filename>
+		<filename>vi-VN.mod_feed.ini</filename>
+		<filename>vi-VN.mod_feed.sys.ini</filename>
+		<filename>vi-VN.mod_finder.ini</filename>
+		<filename>vi-VN.mod_finder.sys.ini</filename>
+		<filename>vi-VN.mod_footer.ini</filename>
+		<filename>vi-VN.mod_footer.sys.ini</filename>
+		<filename>vi-VN.mod_languages.ini</filename>
+		<filename>vi-VN.mod_languages.sys.ini</filename>
+		<filename>vi-VN.mod_login.ini</filename>
+		<filename>vi-VN.mod_login.sys.ini</filename>
+		<filename>vi-VN.mod_menu.ini</filename>
+		<filename>vi-VN.mod_menu.sys.ini</filename>
+		<filename>vi-VN.mod_random_image.ini</filename>
+		<filename>vi-VN.mod_random_image.sys.ini</filename>
+		<filename>vi-VN.mod_related_items.ini</filename>
+		<filename>vi-VN.mod_related_items.sys.ini</filename>
+		<filename>vi-VN.mod_search.ini</filename>
+		<filename>vi-VN.mod_search.sys.ini</filename>
+		<filename>vi-VN.mod_stats.ini</filename>
+		<filename>vi-VN.mod_stats.sys.ini</filename>
+		<filename>vi-VN.mod_syndicate.ini</filename>
+		<filename>vi-VN.mod_syndicate.sys.ini</filename>
+		<filename>vi-VN.mod_tags_popular.ini</filename>
+		<filename>vi-VN.mod_tags_popular.sys.ini</filename>
+		<filename>vi-VN.mod_tags_similar.ini</filename>
+		<filename>vi-VN.mod_tags_similar.sys.ini</filename>
+		<filename>vi-VN.mod_users_latest.ini</filename>
+		<filename>vi-VN.mod_users_latest.sys.ini</filename>
+		<filename>vi-VN.mod_weblinks.ini</filename>
+		<filename>vi-VN.mod_weblinks.sys.ini</filename>
+		<filename>vi-VN.mod_whosonline.ini</filename>
+		<filename>vi-VN.mod_whosonline.sys.ini</filename>
+		<filename>vi-VN.mod_wrapper.ini</filename>
+		<filename>vi-VN.mod_wrapper.sys.ini</filename>
+		<filename>vi-VN.tpl_beez3.ini</filename>
+		<filename>vi-VN.tpl_beez3.sys.ini</filename>
+		<filename>vi-VN.tpl_protostar.ini</filename>
+		<filename>vi-VN.tpl_protostar.sys.ini</filename>
+		<filename file="meta">install.xml</filename>
+		<filename file="meta">vi-VN.xml</filename>
+	</files>
+	<params />
+</extension>
