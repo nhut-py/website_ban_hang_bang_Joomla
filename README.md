@@ -4,7 +4,7 @@ Website bán nước hoa, mỹ phẩm. Xây dựng bằng Joomla và Vituremart.
 ![alt](https://github.com/nhut-py/website_ban_hang_bang_Joomla/blob/main/SQL/img/home.png)
 
   Nhãn hiệu
-![alt](https://github.com/nhut-py/website_ban_hang_bang_Joomla/blob/main/SQL/img/brand.png)
+![alt](https://github.com/nhut-py/website_ban_hang_bang_Joomla/blob/main/SQL/img/frand.png)
 
   Danh mục
 ![alt](https://github.com/nhut-py/website_ban_hang_bang_Joomla/blob/main/SQL/img/category.png)
